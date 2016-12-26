@@ -11,6 +11,19 @@
         <p>一副动画图像
             <img src="http://www.w3school.com.cn/i/eg_cute.gif" alt="睡觉" title="睡觉" width="50" height="50">
         </p>
+        <br>
+        <br>
+        <hr>
+        <img src="http://www.w3school.com.cn/i/eg_planets.jpg" alt="planetmap" title="planetmap" border="0" usemap="#planetmap">
+        <!--img tag中的usemap 属性引用map tag中的id 或name属性，有浏览器决定，所以添加了两个-->
+        <!--map的id属性是map的唯一标识符-->
+        <map name="planetmap" id="planetmap">
+            <!--相对路径-->
+            <area shape="rect" coords="0,0,110,260" href="/example/html/sun.html" alt="Sun" title="Sun" target="_blank"/>
+            <area shape="circle" coords="180,139,14" href="example/html/venus.html" alt="Venus" title="Venus" target="_blank"/>
+            <area shape="circle" coords="129,160,10" href="/example/html/mercur.html" alt="Mercur" title="Mercury" target="_blank"/>
+            
+        </map>
     </body>
 
 </html>
