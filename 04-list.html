@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>list</title>
-    <base href="" target="_blank">
+    <!--全局定义在何处跳转页面，在具体标签中重写时覆盖-->
+    <base target="_blank">
 
 </head>
 <body>
     <!--unordered list 简称ul无序的列表-->
     <!--list item 简称li 列表项-->
     <h2>unordered list</h2>
-    <a href="#definition">跳到definition list</a>
+    <a href="#definition" target="_self">跳到definition list</a>
     <!--type改变样式，不推荐使用-->
     <ul type="square">
         <li>dell</li>
@@ -46,7 +47,7 @@
     <!--
         一个dt对应一个dd ，但dd中可以嵌套其他标签
     -->
-    <a href="#">跳到顶部</a>
+    <a href="#" target="_self">跳到顶部</a>
     <dl>
         <dt>
             <a href="http://baike.baidu.com/link?url=RgkJ_BKlpn-1RKzG6p5tVSkQ_pjKsl0qAGdvYwCs2ku5Ktw-mucMcnw0ABQTQtFA8hquUnz-JLU6EK_ECSza_AnekZQtNgopD1vljIpOrPy" title="北京" target="_blank">北京</a>
@@ -58,7 +59,7 @@
                 # 跳到页面顶部，#后可跟标签的id，跳转后定位到对应的标签，但是滚动没有过程
                 javascript: 没有任何动作
             -->
-            <a href="#">上海</a>
+            <a href="#" target="_self">上海</a>
         </dt>
         <dd>中国的经济中心</dd>
         <dt>
