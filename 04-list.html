@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+    <base href="" target="_blank">
+
+</head>
+<body>
+    <!--unordered list 简称ul无序的列表-->
+    <!--list item 简称li 列表项-->
+    <h2>unordered list</h2>
+    <a href="#definition">跳到definition list</a>
+    <!--type改变样式，不推荐使用-->
+    <ul type="square">
+        <li>dell</li>
+        <li>acer</li>
+        <li>apple
+            <!--嵌套列表-->
+                <ul>
+                    <li>mac pro</li>
+                    <li>mac air</li>
+                </ul>
+        </li>
+        <li>lenovo</li>
+    </ul>
+    <br>
+    <hr>
+    <br>
+    <h2>ordered list</h2>
+    <!--ordered list 简称o，有序的列表-->
+    <ol type="A" start="5">
+        <li>苹果</li>
+        <li>香蕉</li>
+        <li>橘子</li>
+        <li>梨</li>
+
+    </ol>
+    <br>
+    <hr>
+    <br>
+    <h2 id="definition">definition list</h2>
+    <!--definition list 简称d，定义列表-->
+    <!--definition title 简称dt，定义标题-->
+    <!--definition describle 简称d，描述对应的标题-->
+    <!--
+        一个dt对应一个dd ，但dd中可以嵌套其他标签
+    -->
+    <a href="#">跳到顶部</a>
+    <dl>
+        <dt>
+            <a href="http://baike.baidu.com/link?url=RgkJ_BKlpn-1RKzG6p5tVSkQ_pjKsl0qAGdvYwCs2ku5Ktw-mucMcnw0ABQTQtFA8hquUnz-JLU6EK_ECSza_AnekZQtNgopD1vljIpOrPy" title="北京" target="_blank">北京</a>
+        </dt>
+        <dd>中国的首都</dd>
+        <dt>
+            <!--
+            假链接
+                # 跳到页面顶部，#后可跟标签的id，跳转后定位到对应的标签，但是滚动没有过程
+                javascript: 没有任何动作
+            -->
+            <a href="#">上海</a>
+        </dt>
+        <dd>中国的经济中心</dd>
+        <dt>
+            <a href="javascript:">深圳</a>
+        </dt>
+        <dd>
+            <ul>
+                <li>中国的改革开放窗口</li>
+                <li>和香港联通</li>
+            </ul>
+        </dd>
+    </dl>
+</body>
+</html>
