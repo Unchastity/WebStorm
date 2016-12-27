@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+</head>
+<body>
+    <!--用来给一堆数据添加表格语义-->
+    <!--
+    整个表格
+        1. 表格标签有一个边框属性，决定了表格边框的宽度，默认为0
+        2. tr, td或th
+        3. 表格中有两种单元格：td 和 th
+            td是普通的单元格
+            th是标题单元格，自动加粗和居中
+    属性
+        1. 宽度和高度属性(width 和 height)
+            可以给table标签和td标签使用
+            1.1 默认情况下表格的大小由内容调整，也可以通过给table 的width 和 height属性赋值给调整table的大小
+            1.2 给td标签设置widt／height属性，会修改当前单元格的宽度和高度，不会影响整个表格的宽度和高度
+
+        2. 水平对齐和垂直对齐
+            水平对齐可以给table, tr 和 td标签使用
+            垂直对齐只能给tr 和 td 标签使用
+            2.1 给table标签设置align属性可以设置水平对齐方式
+            2.2 给tr 标签设置align属性，可以设置当前一行的水平对齐方式
+            2.3 给td 标签设置align属性，可以设置当前单元格的水平对齐方式
+            2.4 给tr 标签设置valign属性，可以设置当前一行的垂直对齐方式
+            2.5 给td 标签设置valign属性，可以设置当前单元格的垂直对齐方式
+            注意点：同时给tr 和 td 设置相同属性时，由td的对应属性决定对齐方式
+
+        3. 外边距和内边距
+            只能给table标签使用
+            外边距是单元格与单元格之间的距离，默认值为2
+            内边距是单元格内内容与单元格边框的距离，与那个边框取决于单元格的水平和垂直对齐方式
+
+    -->
+    <table border="1" width="500px" height="300px" align="left" cellspacing="10" cellpadding="10">
+        <!--tr 代表一行数据-->
+        <tr align="center">
+            <!--td 代表一个单元格-->
+            <td align="right">0.0</td>
+            <td>0.1</td>
+            <td>0.2</td>
+        </tr>
+
+        <tr valign="top">
+
+            <td valign="bottom">1.0</td>
+            <td>1.1</td>
+            <td>1.2</td>
+
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <!--
+    细线边框
+        在表格中通过指定外边距为0 来实现细线边框不靠谱
+    -->
+    <table border="0.5" bgcolor="black" width="300px" height="200px">
+        <tr bgcolor="white">
+            <td>10.0</td>
+            <td>10.1</td>
+            <td>10.2</td>
+        </tr>
+
+        <tr bgcolor="#ffc0cb">
+            <td>11.0</td>
+            <td bgcolor="aqua">11.1</td>
+            <td>11.2</td>
+        </tr>
+
+    </table>
+
+    <br>
+    <hr>
+    <br>
+    <table bgcolor="black" border="1" width="300px" height="200px">
+        <!--
+        caption标签  设置表格的标题
+            标题会自动相对表格居中
+        注意点：
+            1. 一定要写在table标签中
+            2. 一定紧跟在table标签后
+        -->
+        <caption>
+            <h3>这是表格的标题</h3>
+        </caption>
+
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+</body>
+</html>
