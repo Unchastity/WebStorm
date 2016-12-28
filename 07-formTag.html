@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+</head>
+<body>
+    <form action="http://www.baidu.cn" target="_self">
+        <!--
+        input 标签常用属性：
+            type 属性用于定义input标签的类型
+            name 属性用于表单提交时的引用
+            value 属性用于设置标签默认值，用于checkbox和radio时设置各选项选中时的值
+            id 属性是标签的唯一标识符，可用于与label标签绑定
+            placeholder 属性标签为空时用于输入字段的提示
+            checked 属性用于标签首次加载时被选中
+            required 属性指示输入字段的值是必须的
+        type="email","url","number"可以自动校验输入的内容是否符合格式
+        &nbsp; 占位符
+        -->
+        <fieldset>
+            <legend>注册信息</legend>
+        <p>
+            <input type="image" src="../AppIcon/eg_cute.gif" name="head-image" alt="head-image" width="100px" height="100px" formtarget="_blank" onclick="alert('image button')">
+        </p>
+        <p>
+            <label for="account">账号：</label>
+            <input type="text" name="account" placeholder="请输入用户名" value="Unchastity" required="required" id="account">
+        </p>
+        <p>
+            <label for="pwd">密码：</label>
+            <input type="password" value="jimg" placeholder="请输入密码" id="pwd" required="required">
+        </p>
+        <!--<p>-->
+            <!--确认密码：<input type="password">-->
+        <!--</p>-->
+        <p>
+            性别：
+            <input type="radio" name="gender" checked="checked" value="male">男
+            <input type="radio" name="gender" value="female">女
+            <input type="radio" name="gender" value="between">保密
+        </p>
+        <p>
+            爱好：
+            <input type="checkbox" name="hobby" value="sports">运动
+            <input type="checkbox" name="hobby" value="sing">唱歌
+            <input type="checkbox" name="hobby" value="dance">跳舞
+            <input type="checkbox" name="hobby" checked="checked" value="healt-care">大保健
+        </p>
+        <p>
+            <label for="birthday">生日：</label>
+            <input type="date" value="12/30/2016" id="birthday">
+        </p>
+        <p>
+            <label for="phone">电话号码：</label>
+            <input type="number" value="13641784825" placeholder="请输入用户手机号码" id="phone">
+        </p>
+        <p>
+            <label for="attachment">添加附件：</label>
+            <input type="file" id="attachment" name="attachment" value="info.list">
+        </p>
+        <p>
+            <!--隐藏域-->
+            <input type="hidden" name="user-id" value="1234567890">
+        </p>
+        <p>
+            <label for="user-email">电子邮件：</label>
+            <input type="email" name="email" id="user-email" list="email-address" placeholder="请输入电子邮件" value="jimg1991@163.com">
+            <datalist id="email-address">
+                <option value="jimg1991@163.com"></option>
+                <option value="1023093267@qq.com"></option>
+                <option value="unchastity@outlook.com"></option>
+
+            </datalist>
+        </p>
+        <p>
+            个人网页：
+            <input type="url" name="personal-web" id="personal-web" value="http://www.baidu.cn">
+        </p>
+        <P>
+            个人简介：<br>
+            <textarea name="describe" id="describe" cols="30" rows="10" contenteditable="false">三枪上单。三枪上单的微博主页、个人资料、相册。新浪微博,随时随地分享身边的新鲜事儿。
+            </textarea>
+        </P>
+        <p>
+            <input type="button"  value="取消"  onclick="alert('取消')">
+        </p>
+        <p>
+            <!--formtarget 属性适用与type="submit"和type="image",覆盖form的target属性-->
+            <input type="submit" value="提交" formtarget="_blank">&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="reset" value="重置" formtarget="_self">
+        </p>
+    <!--
+    select 标签
+        optgroup 标签可以分组
+    -->
+        <select name="home-address" id="home-address">
+            <!--<option value="北京"></option>-->
+            <!--<option value="上海"></option>-->
+            <!--<option value="安徽" selected="selected"></option>-->
+            <optgroup label="北京">
+                <option value="chaoyangqu">朝阳区</option>
+                <option value="zhongguancun">中关村</option>
+            </optgroup>
+            <optgroup label="上海">
+                <option value="baoshan">宝山区</option>
+                <option value="minhang">闵行区</option>
+                <option value="pudong">浦东新区</option>
+            </optgroup>
+            <optgroup label="安徽">
+                <optgroup label="合肥">
+                    <option value="luyang">庐阳区</option>
+                    <option value="yaohai">瑶海区</option>
+                    <option value="changfeng">长丰县</option>
+                </optgroup>
+                <optgroup label="淮南市">
+                    <option value="datong">大通区</option>
+                    <option value="panji">潘集区</option>
+                    <option value="ffengtaixian">凤台县</option>
+                </optgroup>
+            </optgroup>
+        </select>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table 单元格合并</title>
+</head>
+<body>
+    <br>
+    <br>
+    <!--<h3>合并第二行的三个单元格：</h3>-->
+    <table bgcolor="black" cellspacing="1" width="300px" height="300px" id="table1">
+        <caption>合并第二行的三个单元格：</caption>
+        <thead>
+            <tr bgcolor="gray">
+                <th>A</th>
+                <th>B</th>
+                <th>C</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr bgcolor="white">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr bgcolor="white">
+                <td colspan="3"></td>
+                <!--<td></td>-->
+                <!--<td></td>-->
+            </tr>
+            <tr bgcolor="white">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr bgcolor="white">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr bgcolor="gray">
+                <td>3</td>
+                <td>3</td>
+                <td>3</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <br>
+    <br>
+    <!--合并第二列第一行至第四行的单元格：-->
+    <table bgcolor="black" cellspacing="1" width="300px" height="300px" id="table2">
+        <caption>合并第二列第一行至第四行的单元格：</caption>
+        <thead>
+            <tr bgcolor="gray">
+               <th>D</th>
+               <th>E</th>
+               <th>F</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr bgcolor="white">
+                <td></td>
+                <td rowspan="4"></td>
+                <td></td>
+             </tr>
+            <tr bgcolor="white">
+                <!--<td></td>-->
+                <td></td>
+                <td></td>
+            </tr>
+            <tr bgcolor="white">
+                <td></td>
+                <td></td>
+                <!--<td></td>-->
+            </tr>
+            <tr bgcolor="white">
+                <td></td>
+                <!--<td></td>-->
+                <td></td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr bgcolor="gray">
+                <td>4</td>
+                <td>1</td>
+                <td>4</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <br>
+    <br>
+    <!--第二行第一个和第二个单元格合并和第二列第三行和第四行合并-->
+    <table bgcolor="black" cellspacing="1" width="300px" height="300px" id="table3">
+        <caption>第二行第一个和第二个单元格合并和第二列第三行和第四行合并</caption>
+        <thead>
+            <tr bgcolor="gray">
+                <th>G</th>
+                <th>H</th>
+                <th>I</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr bgcolor="white">
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr bgcolor="white">
+                <td colspan="2"></td>
+                <!--<td></td>-->
+                <td></td>
+            </tr>
+            <tr bgcolor="white">
+                <td></td>
+                <td rowspan="2"></td>
+                <td></td>
+            </tr>
+            <tr bgcolor="white">
+                <td></td>
+                <td></td>
+                <!--<td></td>-->
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr bgcolor="gray">
+                <td>4</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tfoot>
+
+    </table>
+    <br>
+    <br>
+    <!--第二行的第二列和第三列和第三行的第二列和第三列合并-->
+    <table bgcolor="black" cellspacing="1" width="300px" height="300px" id="table4">
+        <caption>第二行的第二列和第三列和第三行的第二列和第三列合并：</caption>
+        <thead>
+        <tr bgcolor="gray">
+            <th>J</th>
+            <th>K</th>
+            <th>L</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr bgcolor="white">
+            <td></td>
+            <td colspan="2" rowspan="2"></td>
+            <!--<td></td>-->
+        </tr>
+        <tr bgcolor="white">
+            <td></td>
+            <!--<td></td>-->
+            <!--<td></td>-->
+        </tr>
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        </tbody>
+        <tfoot>
+        <tr bgcolor="gray">
+            <td>4</td>
+            <td>3</td>
+            <td>3</td>
+        </tr>
+        </tfoot>
+
+    </table>
+    <br>
+    <br>
+    <table bgcolor="black" cellspacing="1" width="300px" height="300px" id="table5">
+        <caption>我的table</caption>
+        <thead>
+        <tr bgcolor="gray">
+            <th>G</th>
+            <th>H</th>
+            <th>I</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr bgcolor="white">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        </tbody>
+        <tfoot>
+        <tr bgcolor="gray">
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+        </tr>
+        </tfoot>
+
+    </table>
+
+</body>
+
+</html>
