@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+    <style type="text/css">
+        /*
+        属性选择器：
+        [attribute]	[target]
+            作用：选择带有 target 属性所有元素。
+            [type] {
+                color: red;
+            }
+        [attribute=value]	[target=_blank]
+            作用：选择 target="_blank" 的所有元素。
+            [type="text"] {
+                color: red;
+            }
+
+
+        [attribute|=value]	[lang|=en]
+            作用：选择 lang 属性值以 "en" 开头的所有元素。以"-"
+        [attribute^=value]（推荐）	a[src^="https"]（
+            作用：选择其 src 属性值以 "https" 开头的每个 <a> 元素。
+        注意："|" 只能找到以value开头，并且value是被"-"和其他内容隔开的属性值
+             "^" 只要以value开头的都可以找到
+
+
+        [attribute$=value]（推荐）	a[src$=".pdf"]
+            作用：选择其 src 属性以 ".pdf" 结尾的所有 <a> 元素。
+            注意：
+
+        [attribute*=value]（推荐）	a[src*="abc"]
+            作用：选择其 src 属性中包含 "abc" 子串的每个 <a> 元素。
+        [attribute~=value]	[title~=flower]
+            作用：选择 title 属性包含单词 "flower" 的所有元素。
+        区别："~" 只能找到独立的valu，空格隔开或单独的
+             "*" 只要包含就可以
+        */
+
+    </style>
+</head>
+<body>
+    <p>
+        账号：<input type="text">
+    </p>
+    <p>
+        密码：<input type="pwd">
+    </p>
+
+    <img src="" alt="abc-ghjk">
+    <img src="" alt="abcghjk">
+    <img src="" alt="abc ghjk">
+
+    <img src="" alt="tyuiabcyk">
+    <img src="" alt="tyui-abc-yk">
+    <img src="" alt="tyui abc yk">
+
+    <img src="" alt="ghjkadc">
+    <img src="" alt="ghjk adc">
+    <img src="" alt="ghjk-adc">
+</body>
+</html>

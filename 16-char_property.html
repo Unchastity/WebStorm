@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字属性</title>
+    <!--
+    1. 文字样式的属性
+        font-style: italic;
+        font-style: normal;
+
+    2. 文字粗细
+        font-weight: bolder;
+        单词取值：bold, bolder, light, lighter, ...
+        数值取值：100 ~ 90，整值
+
+    3. 文字大小
+        font-size: 20px;
+        单词取值：large, large, ...
+        数值取值：30px(pixel) ...，必须带单位，像素点
+
+    4. 文字字体
+        font-family: "微软雅黑";
+        默认为宋体
+        1）若取值为文字，则必须添加""或''
+        2）设置的字体必须用户电脑安装过的字体，否则无效
+        3）若设置的字体不存在，则使用默认字体
+            字体设置备选格式
+            font-family: "去你的"，"微软雅黑";
+        4） 中文和英文单独设置字体
+                英文字体无法处理中文
+                中文字体可以处理英文
+            例如：font-family: "Andale Mono", "微软雅黑";
+            若要单独处理英文，英文字体需写在前面
+        5）常用字体
+            中文：宋体／黑体／微软雅黑
+            英文："Times New Roman" / Arial
+            英文名不一定都是英文字体，取决于能否处理中文，因为中文字体都有对应的英文名
+
+    5. 文字属性的缩写
+        font: italic bold 10px "楷体";
+        1）在缩写的格式中有些属性可以省略
+           font-style 和 font-weight可以省略
+           font-size 和 font-family不能省略，且不能交换位置
+        2）位置可以交换
+            font-size 和 font-family，且不能交换位置，必须放在后面位置
+    -->
+    <style type="text/css">
+
+        p {
+            /*文字字体*/
+            font-style: normal;
+            font-weight: bold;
+            font-size: larger;
+            /*font-family: "操了","微软雅黑";*/
+            font-family: "Arial", "黑体";
+        }
+
+
+    </style>
+</head>
+<body>
+
+<h1>春晓</h1>
+<p>春眠不觉晓，</p>
+<p>处处闻啼鸟。</p>
+<p>夜来风雨声，</p>
+<p>花落知多少。</p>
+
+
+</body>
+</html>

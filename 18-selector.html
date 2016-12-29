@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <style type="text/css">
+        /*
+        类选择器：选择所有class="duanluo"的元素
+        .duanluo {
+            color: #ff0000;
+        }
+
+        id选择器：选择id="h21"的元素
+        #h21 {
+            color: blue;
+        }
+        #link1 {
+            color: green;
+        }
+
+        选择所有元素
+        * {
+            color: #f00;
+        }
+        选择标签为div的内部所有的元素
+        div *{
+            color: #f00;
+        }
+
+        标签选择器：选择所有<p>元素
+        p {
+            color: #0f0;
+        }
+
+        并集选择器 ","：选择所有<h1>和<a>元素
+        注意：元素之间不能有任何空格
+        h1,a {
+            color: #00f;
+        }
+        交集选择器：两个选择器之间不能有空格
+        注意：元素之间不能有任何空格
+        .duanluo#duanluo1{
+            color: red;
+        }
+        p.duanluo {
+            color: red;
+        }
+
+        后代选择器 " "：选则<div>元素中所有<ul>元素，子元素，孙元素等所有元素2的元素，class和id名称均可以
+        div ul {
+            color:green;
+        }
+        div p {
+            color:red;
+        }
+        子选择器 ">"：选择所有父元素是<div>的所有<p>元素，选取直接子元素
+        注意：元素之间不能有任何空格
+        div>p {
+            color: blue;
+        }
+
+        兄弟选择器：同级选择器
+            1. 相邻兄弟选择器
+                作用：给指定选择器后面"紧跟"的那个选择器选中的标签设置属性
+                注意：之间不能有任何其他的标签
+                h2+p {
+                    color: red;
+                }
+            2. 通用兄弟选择器
+                作用：给指定选择器后面的所有同级标签设置属性
+                注意：同级之间，中间可以有其他同级标签分开，不需要紧跟
+                h2~p {
+                    color:red;
+                }
+        序选择器
+            :first-child    p:first-child
+                作用：选中其同级别的first元素,若是p则设置其属性，否不设置
+                注意：必须是同级别的第一个元素且是选定的标签，若第一个元素是其他标签，则无效，如body的第一个元素是<h2>，第一个<p>元素是第三个，无效，即取元素时不区分标签，取到后再比较是否相符。
+                p:first-child {
+                    color: #f00;
+                }
+
+            :first-of-type	p:first-of-type
+                作用：选择属于其父元素的首个 <p> 元素的每个 <p> 元素
+                注意：选择是区分标签，只要是同级别的第一个选定标签即可
+                p:first-of-type {
+                    color: green;
+                }
+
+            :last-child	p:last-child
+                作用：选择属于其父元素最后一个子元素每个 <p> 元素。
+                注意：和first-child类似，选取时不区分标签类型，即先不分类型取同级别标签的最后一个，再与选定的标签比较，是，则设置其属性，否，则不设置
+                p:last-child {
+                    color: red;
+                }
+                如：body的儿子标签中，最后一个是a标签，不是选定的p标签，则不设置
+
+            :last-of-type	p:last-of-type
+                作用：选择属于其父元素的最后 <p> 元素的每个 <p> 元素。
+                注意：选取时区分标签，只要是同级别的最后一个选定标签即可
+                p:last-of-type {
+                    color: red;
+                }
+                如：body的儿子标签中，最后一个是a标签，最后第二个标签是p标签，但是其是同级别p标签中的最后一个，其即为选中的标签，设置其属性
+
+            :nth-child(n)	p:nth-child(2)
+                作用：选择属于其父元素的第二个子元素的每个 <p> 元素。
+                注意：不区分标签，只要是同级别的第n个，且其为选定的标签即可
+
+            :nth-last-child(n)	p:nth-last-child(2)
+                作用：同上，从最后一个子元素开始计数。
+
+            :nth-of-type(n)	p:nth-of-type(2)
+
+                作用：选择属于其父元素第二个 <p> 元素的每个 <p> 元素。
+                注意：区分标签类型，同级别选定标签类型的第n个
+
+            :nth-last-of-type(n)	p:nth-last-of-type(2)
+                作用：同上，但是从最后一个子元素开始计数。
+
+            :only-child	p:only-child
+                作用：选择属于其父元素的唯一子元素的每个 <p> 元素。
+                注意：不区分标签类型，同级别只要一个元素，且该元素的类型是选定标签类型时设置
+
+            :only-of-type	p:only-of-type
+                作用：选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。
+                注意：区分标签类型，同级别中选定的标签类型只有一个时，设置
+
+            */
+
+    </style>
+</head>
+<body>
+<h2 class="head2" id="h21">我是标题1</h2>
+<a class="anchor1" id="link1" href="#">春眠不觉晓，</a>
+<p class="duanluo" id="duanluo1">春眠不觉晓，</p>
+<a href="javascript:">春眠不</a>
+<p class="duanluo">春眠不觉晓，春眠不觉晓，春眠不觉晓，</p>
+<p>春眠不觉晓，春眠不觉晓，春眠不觉晓，</p>
+<a class="anchor2" id="link2" href="#">春眠不觉晓，</a>
+<div class="div1">
+    <h3>我是标题3</h3>
+    <p class="duanluo">春眠不觉晓，春眠不觉晓，春眠不觉晓，</p>
+    <p>春眠不觉晓，春眠不觉晓，春眠不觉晓，</p>
+    <hr>
+    <p>春眠不觉晓，春眠不觉晓，春眠不觉晓，</p>
+    <p>春眠不觉晓，春眠不觉晓，春眠不觉晓，</p>
+    <ul>
+        <li>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+        </li>
+        <li>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+        </li><li>
+            <p class="duanluo">春眠不觉晓，春眠不觉晓，</p>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+        </li><li>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+            <h2>我是标题2</h2>
+            <p>春眠不觉晓，春眠不觉晓，</p>
+            <p class="duanluo">春眠不觉晓，春眠不觉晓，</p>
+            <p class="duanluo">春眠不觉晓，春眠不觉晓，</p>
+        </li>
+    </ul>
+    <p>春眠不觉晓，春眠不觉晓，</p>
+    <p>春眠不觉晓，春眠不觉晓，</p>
+</div>
+<p>春眠不觉晓，春眠不觉晓，</p>
+<p>春眠不觉晓，春眠不觉晓，</p>
+<a href="javascript;">觉晓，春眠不</a>
+</body>
+</html>
