@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面布局1</title>
+    <style type="text/css">
+        /*
+        1. 垂直方向 标准流；水平方向 浮动流
+        2. 从外向内
+        */
+         */
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .header {
+            width: 980px;
+            height: 100px;
+            margin: 0 auto;
+            /*background-color: red;*/
+        }
+        .header .logo {
+            float: left;
+            width: 250px;
+            height: 100px;
+            background-color: pink;
+        }
+        .header .language {
+            float: right;
+            width: 150px;
+            height: 50px;
+            background-color: aquamarine;
+        }
+        .header .navigation {
+            float: right;
+            width: 650px;
+            height: 50px;
+            background-color: blueviolet;
+        }
+        .content {
+            width: 980px;
+            height: 400px;
+            margin: 0 auto;
+            margin-top: 10px;
+            /*background-color: green;*/
+        }
+        .content .aside {
+            float: left;
+            width: 320px;
+            height: 400px;
+            background-color: yellow;
+            margin-right: 10px;
+        }
+        .content .article {
+            float: right;
+            width: 650px;
+            height: 400px;
+            /*background-color: aquamarine;*/
+        }
+        .content .article .articleTop {
+            width: 650px;
+            height: 350px;
+            /*background-color: antiquewhite;*/
+        }
+        .content .article .articleTop .articleTopLeft {
+            float: left;
+            width: 400px;
+            height: 350px;
+            /*background-color: blueviolet;*/
+        }
+        .content .article .articleTop .articleTopLeft .articleTopLeftTop {
+            width: 400px;
+            height: 200px;
+            background-color: cadetblue;
+        }
+        .content .article .articleTop .articleTopLeft .articleTopLeftBottom {
+            width: 400px;
+            height: 140px;
+            background-color: sandybrown;
+            margin-top: 10px;
+        }
+        .content .article .articleTop .articleTopRight {
+            float: right;
+            width: 240px;
+            height: 350px;
+            margin-left: 10px;
+            background-color: aqua;
+        }
+        .content .article .articleBottom {
+            width: 650px;
+            height: 40px;
+            background-color: grey;
+            margin-top: 10px;
+        }
+        .footer {
+            width: 980px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 10px;
+            background-color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="logo">logo</div>
+        <div class="language">language</div>
+        <div class="navigation">navigation</div>
+    </div>
+    <div class="content">
+        <div class="aside">aside</div>
+        <div class="article">
+            <div class="articleTop">
+                <div class="articleTopLeft">
+                    <div class="articleTopLeftTop">articleTopLeftTop</div>
+                    <div class="articleTopLeftBottom">articleTopLeftBottom</div>
+                </div>
+                <div class="articleTopRight">articleTopRight</div>
+            </div>
+            <div class="articleBottom">articleBottom</div>
+        </div>
+    </div>
+    <div class="footer">
+        footer
+    </div>
+
+</body>
+</html>
