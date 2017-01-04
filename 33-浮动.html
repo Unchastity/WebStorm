@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        /*
+        浮动排序规则：左浮动找左浮动，右浮动找右浮动
+        注意点：浮动元素不能撑起父元素的高
+         */
+        
+        div.box1 {
+            /* 方法一：给第一个盒子设置高度*/
+            /*height: 10px;*/
+
+            background-color: red;
+            /*
+        方法六：
+        overflow: hidden
+            1. 将超出标签范围的内容剪掉
+        注意点：ie6中无效
+         */
+            overflow: hidden;
+
+        }
+        .box1 p {
+            background-color: skyblue;
+        }
+        div.box2 {
+
+            background-color: blue;
+            /* 方法二： 设置clear 属性，不遵循指定的浮动规则
+               注意点：不能设置margin
+            clear: left;
+            或
+            clear: both;
+            */
+        }
+        .box2 p {
+            background-color: green;
+        }
+
+        p {
+            width: 100px;
+            float: left;
+        }
+        /*方法三：
+        隔墙法
+            1。外墙法：在两个浮动盒子的中间添加块级元素，设置clear: both;
+               注意点：外墙法可以让第二个盒子使用margin-top属性，不可以让第一个盒子使用margin
+               -bottom属性
+
+            2。内墙法：在第一个盒子内添加块级元素，设置clear: both;
+               注意点：
+
+        不同点：内墙法可以撑起父元素的高度，外墙法不可以
+        */
+
+        .wall {
+            background-color: blueviolet;
+            clear: both;
+        }
+        .h20 {
+
+            height: 20px;
+        }
+
+        /*
+        方法四：
+        伪元素选择器：在对象盒子内添加元素
+
+        .box1::before {
+            content: "我是文字";
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            display: block;
+           clear: both;
+        }
+        .box1::after {
+            content: "我是文字2";
+            width: 100px;
+            height: 100px;
+            display: block;
+            background-color: sandybrown;
+
+        }*/
+        /*
+        .box1::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 100px;
+            clear: both;
+        }
+        */
+
+        /*
+        .box2::before {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        */
+        /*兼容ie6*/
+        /*.box1 {*/
+            /**zoom: 1;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <p>段落1</p>
+        <p>段落1</p>
+        <p>段落1</p>
+        <!--内墙法-->
+        <!--<div class="wall h20"></div>-->
+    </div>
+    <!--外墙法-->
+    <!--<div class="wall h20"></div>-->
+    <div class="box2">
+        <p>段落2</p>
+        <p>段落2</p>
+        <p>段落2</p>
+    </div>
+
+</body>
+</html>

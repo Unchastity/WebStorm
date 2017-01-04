@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>margin-Top</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        .bigbox {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+            /*保证里面盒子设置margin-top后，bigbox在不设置边框的情况下，被顶下来*/
+            /*一般里面的盒子设置margin-to，外面的盒子设置border才有效*/
+            overflow: hidden;
+        }
+        .smallbox {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bigbox">
+        <div class="smallbox">
+
+        </div>
+    </div>
+</body>
+</html>
