@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易注册界面</title>
+    <style type="text/css">
+        body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,input,button,textarea,p,blockquote,th,td     {
+            margin:0;
+            padding:0;
+        }
+        body {
+            background-color: #f9f9f9;
+        }
+        .header {
+            width: 960px;
+            height: 81px;
+            margin: 0 auto;
+            /*background-color: red;*/
+            padding-top: 28px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .header .logo {
+            width: 644px;
+            height: 27px;
+            background-image: url('../images/glb_v2.png');
+            background-repeat:no-repeat;
+            background-position: 0 0;
+            float: left;
+        }
+        .header .logo a {
+            width: 125px;
+            height: 30px;
+            /*水平排列*/
+            display: inline-block;
+            /*background-color: pink;*/
+        }
+        .header .links {
+            float: right;
+            width: 150px;
+            height: 30px;
+            /*盒子内容右对齐*/
+            text-align: right;
+            /*垂直居中*/
+            line-height: 30px;
+            /*字体大小*/
+            font-size: 12px;
+            color: grey;
+        }
+        .header .links a {
+            /*设置下划线*/
+            text-decoration: none;
+            /*设置字体大小*/
+            /*font-size: 12px;*/
+            /*设置字体颜色*/
+            color: blue;
+            /*垂直居中*/
+            /*line-height: 30px;*/
+        }
+        .content {
+            width: 960px;
+            height: 678px;
+            margin: 0 auto;
+            /*background-color: green;*/
+        }
+        .content .top {
+            width: 960px;
+            height: 36px;
+            /*设置背景图片*/
+            background-image: url("../images/bgx.png");
+            background-repeat: repeat;
+            background-position: 0px 0px;
+            /*background-color: skyblue;*/
+            /*设置圆角*/
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+
+            padding-left: 20px;
+            box-sizing: border-box;
+        }
+        .content .top h1 {
+            /*字体大小*/
+            font-size: 14px;
+            /*垂直居中*/
+            line-height: 36px;
+            color: white;
+            /*background-color: red;*/
+        }
+        .content .bottom {
+            width: 958px;
+            height: 642px;
+            background-color: #e4e4e4;
+            /*设置边框*/
+            border-color: #e4e4e4;
+            border-style: solid;
+            border-width: 1px;
+            border-top: none;
+        }
+        .content .bottom .mainBody {
+            width: 642px;
+            height: 642px;
+            background-color: #ffffff;
+            float: left;
+            padding: 50px 0 0 55px;
+            box-sizing: border-box;
+        }
+        .content .bottom .mainBody .regTabs {
+            width: 582px;
+            height: 58px;
+            /*background-color: pink;*/
+            padding: 0 0 0 45px;
+            box-sizing: border-box;
+        }
+        .content .bottom .mainBody .regTabs .tabsUL {
+            width: 412px;
+            height: 35px;
+            list-style: none;
+
+            background-image: url('../images/tab.jpg');
+            background-repeat:no-repeat;
+            background-position: 0 0;
+        }
+        .content .bottom .mainBody .regTabs .tabsUL li{
+            float: left;
+            width: 137px;
+            height: 35px;
+            text-align: center;
+            line-height: 35px;
+        }
+        .content .bottom .mainBody .regTabs .tabsUL li a {
+            color: #555555;
+            text-decoration: none;
+        }
+        .content .bottom .mainBody .regMain {
+            width: 580px;
+            height: 480px;
+            /*background-color: skyblue;*/
+        }
+        .content .bottom .mainBody .regMain div {
+            width: 580px;
+            height: 50px;
+            margin-bottom: 10px;
+            /*background-color: blue;*/
+        }
+        .content .bottom .mainBody .regMain div dl dt{
+            width: 90px;
+            height: 30px;
+            display: inline-block;
+            float: left;
+            line-height: 30px;
+            box-sizing: border-box;
+            text-align: right;
+            font-size: 14px;
+            font-family: verdana,sans-serif;
+        }
+        .content .bottom .mainBody .regMain div dl dt .txt-impt {
+            color: red;
+        }
+        .content .bottom .mainBody .regMain div dl dd {
+            width: 350px;
+            height: 50px;
+            display: inline-block;
+            float: left;
+            /*background-color: deeppink;*/
+            margin-left: 50px;
+            box-sizing: border-box;
+        }
+
+        .content .bottom .mainBody .regMain div dl dd input{
+            width: 335px;
+            height: 25px;
+            border-color: grey;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 3px;
+        }
+        .content .bottom .mainBody .regMain div dl dd .ipt{
+            width: 215px;
+            height: 25px;
+        }
+        .content .bottom .mainBody .regMain div dl .reg-item-vcode {
+            width: 360px;
+            height: 100px;
+        }
+        .content .bottom .mainBody .regMain div dl dd .regForm-dd-vcode {
+            display: inline-block;
+            width: 230px;
+            height: 80px;
+            margin: 0 auto;
+        }
+        .content .bottom .mainBody .regMain div dl dd .regForm-dd-vcode .text-desc {
+            /*text-align: right;*/
+            font-size: 14px;
+            font-family: verdana,sans-serif;
+        }
+        .content .bottom .mainBody .regMain div dl dd .regForm-vcode {
+            display: inline-block;
+            width: 120px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        .content .bottom .mainBody .regMain div dl dd select {
+            width: 100px;
+            height: 30px;
+        }
+        .content .bottom .mainBody .regMain div dl dd .mainCfmPwdTips {
+            font-size: 10px;
+            color: #a6a6a6;
+        }
+        .content .bottom .mainBody-side {
+            width: 315px;
+            height: 642px;
+            background-color: #f5f5f5;
+            float: right;
+
+            padding: 100px 37px;
+            box-sizing: border-box;
+        }
+        .footer {
+            /*width: 960px;*/
+            height: 40px;
+            margin: 0 auto;
+            /*background-color: blue;*/
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">
+            <a href="http://mail.163.com/" title="网易163免费邮" target="_blank"></a>
+            <a href="http://www.126.com/" title="网易126免费邮" target="_blank"></a>
+            <a href="http://www.yeah.net/" title="网易Yeah.net免费邮" target="_blank"></a>
+        </div>
+        <div class="links">
+            <a href="http://mail.163.com/html/mail_intro/" target="_blank">了解更多</a>
+            |
+            <a href="http://help.mail.163.com/feedback.do?m=add&categoryName=%e6%b3%a8%e5%86%8c" target="_blank">反馈意见</a>
+        </div>
+    </div>
+    <div class="content">
+        <div class="top">
+            <h1>欢迎注册无限容量的网易邮箱！邮件地址可以登录使用其他网易旗下产品。</h1>
+        </div>
+        <div class="bottom">
+            <div class="mainBody">
+                <div class="regTabs">
+                    <ul class="tabsUL">
+                        <li>
+                            <a href="#" title="注册字母邮箱">注册字母邮箱</a>
+                        </li>
+                        <li>
+                            <a href="#" title="注册手机号码邮箱">注册手机号码邮箱</a>
+                        </li>
+                        <li>
+                            <a href="#" title="注册VIP邮箱">注册VIP邮箱</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="regMain">
+                    <div>
+                        <dl>
+                            <dt class="regForm-item-tit"><span class="txt-impt">*</span>邮件地址</dt>
+                            <dd class="regForm-item-ct">
+                                <input class="ipt" type="text" name="name" placeholder="建议用手机号码注册">@<select id="mainDomainSelect" name="mainDomain">
+                                    <option value="163.com">163.com</option>
+                                    <option value="126.com">126.com</option>
+                                    <option value="yeah.net">yeah.net</option>
+                                </select>
+                                <div class="mainCfmPwdTips">
+                                    <span class="text-desc">6~18个字符，可使用字母、数字、下划线，需以字母开头</span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt class="regForm-item-tit"><span class="txt-impt">*</span>密码</dt>
+                            <dd class="regForm-item-ct">
+                                <input type="password" name="mainPassword" placeholder="">
+                                <div class="mainCfmPwdTips">
+                                    <span class="text-desc">6~16个字符，区分大小写</span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt class="regForm-item-tit"><span class="txt-impt">*</span>确认密码</dt>
+                            <dd class="regForm-item-ct">
+                                <input type="password" name="mainPassword" placeholder="">
+                                <div class="mainCfmPwdTips">
+                                    <span class="text-desc">请再次填写密码</span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt class="regForm-item-tit"><span class="txt-impt">*</span>手机号码</dt>
+                            <dd class="regForm-item-ct">
+                                <input type="number" name="mainPassword" placeholder="">
+                                <div class="mainCfmPwdTips">
+                                    <span class="text-desc">请再次填写密码</span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt class="regForm-item-tit"><span class="txt-impt">*</span>验证码</dt>
+                            <dd class="regForm-item-ct reg-item-vcode">
+                                <div class="regForm-dd-vcode">
+                                    <input class="ipt ipt-vcode" type="text" name="mainPassword" placeholder="">
+                                    <div class="text-desc">请填写图片中的字符，不区分大小写</div>
+                                </div>
+                                <div class="regForm-vcode">
+                                    <img class="vCode" src="http://reg.email.163.com/unireg/call.do?cmd=register.verifyCode&v=common/verifycode/vc_en&vt=main_acode&env=822721861192&t=1483588525431" alt="验证码">
+                                    <a href="#">看不清楚？换张图片</a>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt class="regForm-item-tit"><span class="txt-impt">*</span>短信验证码</dt>
+                            <dd class="regForm-item-ct">
+                                <input type="text" name="mainPassword" placeholder="">
+                                <div class="mainCfmPwdTips">
+                                    <span class="text-desc">请查收手机短信，并填写短信中的验证码</span>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt></dt>
+                            <dd>
+                                <input type="checkbox" checked="checked">同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div>
+                        <dl>
+                            <dt></dt>
+                            <dd>
+                                <input type="submit" title="立即注册">
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <div class="mainBody-side">
+                <img src="../images/mail_da.jpg" alt="快速注册">
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+
+</body>
+</html>
