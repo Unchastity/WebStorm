@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点图-京东首页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .slider-list {
+            width: 590px;
+            height: 340px;
+            background-color: deepskyblue;
+
+            position: relative;
+            left: 50%;
+            margin-top: 100px;
+            margin-left: -295px;
+        }
+        .slider-list span {
+            width: 30px;
+            height: 60px;
+            line-height: 60px;
+            background-color: rgba(0,0,0,0.3);
+            color: white;
+            font-size: 30px;
+            text-align: center;
+        }
+        .slider-list .left-arrow {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -30px;
+        }
+        .slider-list .right-arrow {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            margin-top: -30px;
+        }
+        .slider-list ul {
+            width: 200px;
+            height: 40px;
+            list-style: none;
+            /*background-color: floralwhite;*/
+
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .slider-list ul li{
+            float: left;
+            width: 35px;
+            height: 35px;
+            margin-right: 2px;
+            line-height: 40px;
+            text-align: center;
+            border: 1px solid dimgrey;
+            border-radius: 35px;
+            background-color: rgba(200, 200, 200, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-list">
+        <img src="https://img12.360buyimg.com/da/jfs/t3049/295/5388264307/129427/66b6c033/586b95c5Na0c41628.jpg" alt="京东年货">
+        <span class="left-arrow">&lt</span>
+        <span class="right-arrow">&gt</span>
+        <ul class="slider-indicator">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+</body>
+</html>
