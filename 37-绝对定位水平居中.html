@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绝对定位水平居中</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 300px;
+            height: 100px;
+            position: absolute;
+            background-color: red;
+            /*margin: 0 auto;*/
+            left: 50%;
+            margin-left: -150px;
+            /*
+            绝对定位水平居中：
+                1。设置left为参考对象元素宽度的50%;
+                2。设置目标元素的margin-left为自身宽度的负50%
+            */
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
