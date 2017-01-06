@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>百度糯米美食团购</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            width: 246px;
+            height: 327px;
+            margin: 0 auto;
+            margin-top: 100px;
+            padding-top: 10px;
+            background-color: #ffffff;
+            /*background-color: pink;*/
+            border: 0.5px solid #e0e1e2;
+        }
+        .content .header-img {
+            width: 227px;
+            height: 138px;
+            position: relative;
+        }
+        .content .header-img .main-header-img{
+            /*float: left;*/
+            width: 227px;
+            height: 138px;
+            /*background-color: deepskyblue;*/
+            border: 1px solid #e0e1e2;
+
+        }
+        .content .header-img .free-appointment{
+            width: 58px;
+            height: 57px;
+            background-image: url(../images/free-appointment.png);
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .content .context {
+            /*width: 225px;*/
+            height: 179px;
+            padding-top: 15px;
+        }
+        .content .context .pbox {
+            width: 225px;
+            height: 18px;
+        }
+        .content .context .pbox .title a{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 16px;
+            color: black;
+            position: relative;
+            line-height: 18px;
+        }
+        .content .context .pbox .title a .ticket-icon {
+            width: 17px;
+            height: 17px;
+
+            background-image: url("../images/ticket.png");
+            background-repeat: no-repeat;
+            background-position: 0 0;
+
+            position: absolute;
+            left: 52px;
+            top: 0;
+        }
+
+        .content .context .shop-desc {
+            width: 225px;
+            height: 38px;
+            margin-top: 11px;
+            margin-bottom: 11px;
+            /*background-color: greenyellow;*/
+        }
+        .content .context .shop-desc p {
+            height: 38px;
+            line-height: 19px;
+            color: #878787;
+            font-size: 12px;
+            font-family: 'Hiragino Sans GB',simsun;
+        }
+
+        .content .context .price-box {
+            width: 225px;
+            height: 41px;
+            /*background-color: skyblue;*/
+            line-height: 41px;
+        }
+
+        .content .context .price-box .current-price {
+            float: left;
+            font-size: 24px;
+            color: #fc4a84;
+        }
+        .content .context .price-box .current-price .icomoney {
+            font-size: 16px;
+        }
+        .content .context .price-box .pre-price {
+            float: right;
+            color: #9e9e9e;
+            font-size: 14px;
+            font-family: 'Hiragino Sans GB',"Sinhala MN";
+            text-decoration: line-through;
+        }
+
+       .content .context .solder-box {
+            width: 225px;
+            height: 36px;
+            /*background-color: palegreen;*/
+           position: relative;
+        }
+        .content .context .solder-box span {
+            height: 35px;
+            line-height: 35px;
+            color: #9e9e9e;
+            font-size: 12px;
+            font-family: 'Hiragino Sans GB',"Sinhala MN";
+        }
+        .content .context .solder-box .solder-number {
+            /*display: inline-block;*/
+            /*float: left;*/
+            width: 60px;
+            height: 35px;
+            /*background-color: pink;*/
+            text-align: left;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .content .context .solder-box .evaluate {
+            width: 165px;
+            height: 35px;
+            text-align: right;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .content .context .solder-box .evaluate span {
+            position: relative;
+            top: -15px;
+        }
+        .content .context .solder-box .evaluate .star {
+            width: 70px;
+            height: 15px;
+            line-height: 35px;
+
+            background-image: url('../images/iconstar-red.png');
+            background-repeat: no-repeat;
+            background-position: 0 0;
+            position: relative;
+            top: 10px;
+            left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="header-img">
+            <img class="main-header-img" src="../images/kfc.jpg" alt="KFC">
+            <span class="free-appointment">
+                <!--<img src="../images/free-appointment.png" alt="免预约">-->
+            </span>
+        </div>
+        <div class="context">
+            <div class="pbox">
+                <span class="title">
+                    <a href="#">肯德基<span class="ticket-icon"></span></a>
+                </span>
+            </div>
+            <div class="shop-desc">
+                <p>[多店通用]50元代金券！</p>
+            </div>
+            <div class="price-box">
+                <span class="current-price">
+                    <span class="icomoney">¥</span>47.5
+                </span>
+                <span class="pre-price">
+                    ¥50
+                </span>
+            </div>
+            <div class="solder-box">
+                <span class="solder-number">售102475</span>
+                <div class="evaluate">
+                    <div class="star"></div>
+                    <span>6455人已评价</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
