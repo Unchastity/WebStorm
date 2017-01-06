@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position</title>
+    <style type="text/css">
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            background-color: red;
+            /*position: absolute;*/
+            /*left: 20px;*/
+        }
+        .box2 {
+            background-color: green;
+            /*position: relative;*/
+            position: absolute;
+            left: 50px;
+            top: 20px;
+        }
+        .box3 {
+            background-color: blue;
+            /*position: relative;*/
+        }
+        .subBox3 {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+
+            position: absolute;
+            left: 80px;
+            top: 80px;
+        }
+        .subsubBox3 {
+            width: 30px;
+            height: 30px;
+            background-color: skyblue;
+
+            position: absolute;
+            left: 20px;
+            top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        1.定位流：
+            1）相对定位：相对元素本身正常位置进行定位，对其他元素位置没有影响
+                left: 在元素left侧添加指定单位像素
+                top: 在元素top侧添加指定单位像素
+                ...
+                注意点：1。相对定位不脱离标准流，会继续在标准流中占用一份空间
+                       2。在相对定位中通一方向上的定位属性只能使用一个
+                       3。由于不脱离标准流，所以在相对定位中是区分块级元素／行内元素／行内块级元素
+            2）绝对定位：相对
+    -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">
+        <div class="subBox3">
+            <div class="subsubBox3"></div>
+        </div>
+    </div>
+</body>
+</html>

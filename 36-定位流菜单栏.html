@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东菜单栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 630px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 100px;
+            background-color: red;
+
+        }
+        div ul {
+            list-style: none;
+            background-color: green;
+        }
+        div ul li {
+            float: left;
+            width: 70px;
+            background-color: grey;
+            line-height: 40px;
+            text-align: center;
+        }
+        div ul li:nth-of-type(3) {
+            /*background-color: skyblue;*/
+            /*相对定位没有脱离标准流，以该标签在标准流中的位置为参考点*/
+            position: relative;
+        }
+        div ul li img {
+            width: 30px;
+            height: 18px;
+            /*
+            position: relative;
+            left: -5px;
+            top: -7px;
+            */
+            /*
+            相对定位的弊端：
+                相对定位没有脱离标准流，会在标准流中占用空间位置，不利于元素位置定位
+
+             */
+            /*
+            position: absolute;
+            left: 422px;
+            top: 100px;
+            */
+            /*
+            绝对定位：
+            1。默认以body为参考点
+            2。祖先元素中有定位流时，以该定位流祖先元素为参考点
+            3。祖先元素中有多个定位流时，以最近的一个定位流祖先元素为参考点
+            绝对定位的弊端：
+                绝对定位默认body标签为参考点，位置会随着页面的大小变化而变化
+             */
+            position: absolute;
+            left: 50px;
+            top: 0;
+            /*
+            相对定位和绝对定位混合使用：
+            "子绝父相"
+
+             */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul>
+            <li>秒杀</li>
+            <li>优惠券</li>
+            <li>闪购
+                <img src="../images/three_years.png" alt="3周年">
+            </li>
+            <li>拍卖</li>
+            <li>服装城</li>
+            <li>京东超市</li>
+            <li>生鲜</li>
+            <li>全球购</li>
+            <li>京东金融</li>
+        </ul>
+
+    </div>
+</body>
+</html>

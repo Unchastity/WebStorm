@@ -11,6 +11,11 @@
         body {
             background-color: #f9f9f9;
         }
+        a {
+            color: #555555;
+            text-decoration: none;
+            font-size: 12px;
+        }
         .header {
             width: 960px;
             height: 81px;
@@ -28,6 +33,9 @@
             background-repeat:no-repeat;
             background-position: 0 0;
             float: left;
+        }
+        a {
+
         }
         .header .logo a {
             width: 125px;
@@ -132,16 +140,18 @@
             color: #555555;
             text-decoration: none;
         }
+
         .content .bottom .mainBody .regMain {
             width: 580px;
             height: 480px;
             /*background-color: skyblue;*/
         }
+        /*
         .content .bottom .mainBody .regMain div {
             width: 580px;
             height: 50px;
             margin-bottom: 10px;
-            /*background-color: blue;*/
+            background-color: blue;
         }
         .content .bottom .mainBody .regMain div dl dt{
             width: 90px;
@@ -162,7 +172,7 @@
             height: 50px;
             display: inline-block;
             float: left;
-            /*background-color: deeppink;*/
+            background-color: deeppink;
             margin-left: 50px;
             box-sizing: border-box;
         }
@@ -190,7 +200,7 @@
             margin: 0 auto;
         }
         .content .bottom .mainBody .regMain div dl dd .regForm-dd-vcode .text-desc {
-            /*text-align: right;*/
+            text-align: right;
             font-size: 14px;
             font-family: verdana,sans-serif;
         }
@@ -208,6 +218,117 @@
         .content .bottom .mainBody .regMain div dl dd .mainCfmPwdTips {
             font-size: 10px;
             color: #a6a6a6;
+        }
+        .content .bottom .mainBody .regMain div dl .regForm-checkbox {
+            display: inline-block;
+            width: 350px;
+            height: 30px;
+            margin: 0 0 0 50px;
+            font-size: 12px;
+            line-height: 30px;
+        }
+        .content .bottom .mainBody .regMain div dl dd .agree-police {
+            display: inline-block;
+            width: 10px;
+        }
+        */
+
+        .content .bottom .mainBody .regMain .regForm-item {
+            width: 573px;
+            height: 69px;
+            /*background-color: pink;*/
+            padding: 10px 0 0 0;
+            box-sizing: border-box;
+        }
+
+        /*标题盒子*/
+        .content .bottom .mainBody .regMain .regForm-item .regForm-item-title {
+            width: 550px;
+            height: 40px;
+            /*background-color: skyblue;*/
+        }
+        /*标题text*/
+        .content .bottom .mainBody .regMain .regForm-item .regForm-item-title .regTitle {
+            display: inline-block;
+            width: 100px;
+            height: 35px;
+            color: #555555;
+            text-align: right;
+            font-family: verdana,sans-serif;
+        }
+        /*star*/
+        .content .bottom .mainBody .regMain .regForm-item .regForm-item-title .regTitle span {
+            color: red;
+        }
+        /*输入框盒子*/
+        .content .bottom .mainBody .regMain .regForm-item .regForm-item-title .reg-ipt-tel {
+            display: inline-block;
+            width: 400px;
+            height: 35px;
+            margin-left: 30px;
+        }
+        /*输入框*/
+        .content .bottom .mainBody .regMain .regForm-item .regForm-item-title .reg-ipt-tel input {
+            width: 320px;
+            height: 30px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #ababab;
+            -webkit-border-radius:3px;
+            -moz-border-radius:3px;
+            border-radius:3px;
+        }
+        .content .bottom .mainBody .regMain .regForm-item .reg-desc {
+            margin-left: 135px;
+            font-size: 12px;
+            color: #9a9a9a;
+        }
+        /*图片验证码*/
+        .content .bottom .mainBody .regMain .vCodeArea-big {
+            width: 573px;
+            height: 129px;
+            border: 1px solid while;
+        }
+        .content .bottom .mainBody .regMain .vCodeArea-big .vCodeArea-title {
+            height: 70px;
+        }
+        .content .bottom .mainBody .regMain .vCodeArea-big .vCodeArea-title .regTitle {
+            /*相对定位*/
+            position: relative;
+            top: -30px;
+        }
+        .content .bottom .mainBody .regMain .vCodeArea-big .vCodeArea-title .vcode-ipt {
+            width: 210px;
+            height: 30px;
+        }
+        /*图片验证码输入框*/
+        .content .bottom .mainBody .regMain .vCodeArea-big .vCodeArea-title .reg-ipt-tel input{
+            width: 200px;
+            height: 30px;
+            /*background-color: red;*/
+            margin-top: 0;
+            /*相对定位*/
+            position: relative;
+            top: -30px;
+        }
+        .content .bottom .mainBody .regMain .vCodeArea-big .vCodeArea-title .img-box {
+            width: 125px;
+            height: 70px;
+            display: inline-block;
+            /*相对定位*/
+            position: relative;
+            top: 10px;
+        }
+        .content .bottom .mainBody .regMain .vCodeArea-big div .getVcode {
+            width: 200px;
+            height: 25px;
+            background-color: #f4f4f4;
+            border: 1px solid #bbbbbb;
+            border-radius: 3px;
+            color: black;
+            font-size: 15px;
+            margin-top: 10px;
+            margin-left: 135px;
         }
         .content .bottom .mainBody-side {
             width: 315px;
@@ -261,6 +382,7 @@
                     </ul>
                 </div>
                 <div class="regMain">
+                    <!--
                     <div>
                         <dl>
                             <dt class="regForm-item-tit"><span class="txt-impt">*</span>邮件地址</dt>
@@ -337,9 +459,13 @@
                     </div>
                     <div>
                         <dl>
-                            <dt></dt>
-                            <dd>
-                                <input type="checkbox" checked="checked">同意<a href="#">"服务条款"</a>和<a href="#">"隐私权相关政策"</a>
+                            <dd class="regForm-checkbox">
+                                <label></label>
+                                <input class="agree-police" type="checkbox" checked="checked" value="agree-police">
+                                同意
+                                <a href="http://reg.163.com/agreement.shtml">"服务条款"</a>
+                                和
+                                <a href="http://reg.163.com/agreement_game.shtml">"隐私权相关政策"</a>
                             </dd>
                         </dl>
                     </div>
@@ -347,9 +473,72 @@
                         <dl>
                             <dt></dt>
                             <dd>
-                                <input type="submit" title="立即注册">
+                                <input type="submit" value="立即注册">
                             </dd>
                         </dl>
+                    </div>
+                    -->
+                    <div class="regForm-item">
+                        <div class="regForm-item-title">
+                            <div class="regTitle"><span>*</span> 手机号码</div>
+                            <div class="reg-ipt-tel">
+                                <input type="number" name="mobile"><b>@163.com</b>
+                            </div>
+                        </div>
+                        <div class="reg-desc">请填写手机号码</div>
+                    </div>
+
+                    <div class="regForm-item vCodeArea-big">
+                        <div class="regForm-item-title vCodeArea-title">
+                            <div class="regTitle"><span>*</span> 图片验证码</div>
+                            <div class="reg-ipt-tel vcode-ipt">
+                                <input type="text" name="acode">
+                            </div>
+                            <div class="img-box">
+                                <!--http://reg.email.163.com/unireg/call.do?cmd=register.verifyCode&v=common/verifycode/vc_en&vt=mobile_acode&t=1483601296024-->
+                                <img class="img-vcode" src="../images/call.jpeg" alt="图片验证码">
+                                <a href="#">看不清楚？换张图片</a>
+                            </div>
+                        </div>
+                        <div class="reg-desc">请填写图片中的字符，不区分大小写</div>
+                        <div>
+                            <input class="getVcode" type="button" name="免费获取验证码" value="免费获取验证码">
+                        </div>
+                    </div>
+
+                    <div class="regForm-item">
+                        <div class="regForm-item-title">
+                            <div class="regTitle"><span>*</span> 短信验证码</div>
+                            <div class="reg-ipt-tel">
+                                <input type="text" name="acode">
+                            </div>
+                        </div>
+                        <div class="reg-desc">请查收手机短信，并填写短信中的验证码</div>
+                    </div>
+                    <div class="regForm-item">
+                        <div class="regForm-item-title">
+                            <div class="regTitle"><span>*</span> 密码</div>
+                            <div class="reg-ipt-tel">
+                                <input type="text" name="mobilePassword">
+                            </div>
+                        </div>
+                        <div class="reg-desc">6~16个字符，区分大小写</div>
+                    </div>
+                    <div class="regForm-item">
+                        <div class="regForm-item-title">
+                            <div class="regTitle"><span>*</span> 确认密码</div>
+                            <div class="reg-ipt-tel">
+                                <input type="text" name="mobileConfirmPassword">
+                            </div>
+                        </div>
+                        <div class="reg-desc">请再次填写密码</div>
+                    </div>
+                    <div class="regForm-item">
+                        <div class="regForm-item-title">
+                            <div class="reg-ipt-tel">
+                                <input type="text" name="mobileConfirmPassword">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
