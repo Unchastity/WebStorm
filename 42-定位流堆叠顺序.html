@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位流堆叠顺序</title>
+    <style>
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*z-index: -1;*/
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<img src="http://www.w3school.com.cn//i/eg_smile.gif" alt="鼠标">
+<p>由于图像的 z-index 是 -1，因此它在文本的后面出现。</p>
+<p>由于图像的 z-index 是 -1，因此它在文本的后面出现。</p>
+<p>由于图像的 z-index 是 -1，因此它在文本的后面出现。</p>
+<p>由于图像的 z-index 是 -1，因此它在文本的后面出现。</p>
+<p>由于图像的 z-index 是 -1，因此它在文本的后面出现。</p>
+</body>
+</html>

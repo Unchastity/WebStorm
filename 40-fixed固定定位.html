@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fixed固定定位</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 100px;
+            height: 1000px;
+            background-color: pink;
+        }
+        .box div {
+            width: 100px;
+            height: 100px;
+        }
+        .box1 {
+            background-color: red;
+        }
+        .box2 {
+            background-color: green;
+            position: fixed;
+            /*top: 300px;*/
+        }
+        .box3 {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    1. 固定定位：让某一个元素不随着滚动条移动而移动，想对浏览器窗口定位，不会占用标准流中的空间
+        1）脱离标准流，不区分inline/block/inline-block
+        2）默认位置为该元素在标准流中的位置，会遮盖脱离标准流后，顶替到该元素位置的标准流元素
+        3）与背景关联方式相似
+            背景定位（fixed)可以让背景图片不随这滚动条的滚动而滚动
+            固定定位可以让某个盒子不随着滚动条的滚动而滚动
+-->
+
+<div class="box">
+    <div class="box1"></div>
+    <div class="box3"></div>
+    <div class="box2"></div>
+
+</div>
+</body>
+</html>
