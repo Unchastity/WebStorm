@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4过渡属性-手风琴效果</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            width: 600px;
+            height: 100px;
+            margin: 0 auto;
+            margin-top: 100px;
+            list-style: none;
+            background-color: skyblue;
+            /*overflow: hidden;*/
+        }
+        ul li {
+            float: left;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            background-color: pink;
+            border: 1px solid black;
+            box-sizing: border-box;
+            overflow: hidden;
+
+            transition: width 3s linear;
+        }
+        ul:hover li{
+            width: 50px;
+        }
+        ul li:hover {
+            width: 350px;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>简写属性，用于在一个属性中设置四个过渡属性。</li>
+    <li>规定应用过渡的 CSS 属性的名称。</li>
+    <li>定义过渡效果花费的时间。</li>
+    <li>规定过渡效果的时间曲线。</li>
+    <li>规定过渡效果何时开始。</li>
+    <li>规定过渡效果何时开始。</li>
+</ul>
+
+</body>
+</html>
