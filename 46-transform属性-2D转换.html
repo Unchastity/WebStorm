@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transform属性-2D转换</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            width: 500px;
+            height: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid grey;
+
+            list-style: none;
+        }
+        ul li {
+            width: 100px;
+            height: 50px;
+            background-color: blue;
+            margin-bottom: 70px;
+        }
+
+        ul li:nth-child(2) {
+            /*
+                translate: 2D平面移动
+                    第一个参数：元素参考坐标轴水平方向
+                    第二个参数：元素参考坐标轴垂直方向
+            */
+            transform:translate(200px, 20px);
+        }
+        ul li:nth-child(3) {
+            /*
+                scale: 2D缩放转换
+                    第一个参数：元素参考坐标轴水平方向缩放
+                    第二个参数：元素参考坐标轴垂直方向缩放
+                1）value < 1: 缩小
+                2）value = 1: 不变
+                3）value > 1: 放大
+            */
+            transform:scale(2, 2);
+        }
+        ul li:nth-child(4) {
+            /*
+                rotate: 2D旋转
+                    参数：旋转角度，单位deg
+                注意点：旋转的是该元素的参考坐标轴，该元素在参考坐标轴内位置不变
+            */
+            transform: rotate(45deg);
+        }
+        ul li:nth-child(5) {
+            /*
+                1）第一步：该元素的参考坐标轴旋转45度，再在该元素参考坐标轴方向上移动
+            */
+            transform: rotate(45deg) translate(100px, 0px);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+</html>
